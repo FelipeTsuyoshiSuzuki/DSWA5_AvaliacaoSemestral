@@ -5,12 +5,14 @@
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
-    {% if not known %}
-    <p>Pleased to meet you!</p>
-    {% else %}
-    <p>Happy to see you again!</p>
-    {% endif %}
+    <h1>Avaliação Semestral</h1>
+    <h3>Aluno: Felipe Tsuyoshi Suzuki</h2>
+    <h3>Prontuário: PT301441X</h2>
 </div>
-{{ wtf.quick_form(form) }}
+<br>
+<p>A data e hora local é {{ moment(current_time).format('LLL') }}.</p>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
 {% endblock %}
