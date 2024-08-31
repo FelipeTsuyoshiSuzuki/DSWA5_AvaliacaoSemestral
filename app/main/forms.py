@@ -9,7 +9,7 @@ class NameForm(FlaskForm):
 
 
 class RegisterSubjectForm(FlaskForm):
-    subject_name = StringField('Cadastre a nova disciplina e o semestre associado', validators=[DataRequired()])
+    name = StringField('Cadastre a nova disciplina e o semestre associado', validators=[DataRequired()])
     semester = RadioField('Semestre', choices=[
         ('1', '1º semestre'),
         ('2', '2º semestre'),

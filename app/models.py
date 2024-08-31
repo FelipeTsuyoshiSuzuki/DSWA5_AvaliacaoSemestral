@@ -19,3 +19,14 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+
+
+class Discipline(db.Model):
+    __tablename__ = 'disciplines'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    semester = db.Column(db.String(20))
+
+    def __repr__(self):
+        return '<Discipline %r>' % self.name

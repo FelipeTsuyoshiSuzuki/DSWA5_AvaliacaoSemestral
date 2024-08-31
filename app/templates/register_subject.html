@@ -6,4 +6,22 @@
 {% block page_content %}
 {{ wtf.quick_form(form) }}
 
+<h2>Relação de disciplinas cadastradas</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Disciplina</th>
+            <th>Semestre</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for key in disciplines %}
+        <tr>
+            <td>{{ key.name }}</td>
+            <td>{{ key.semester }}° semestre</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}
